@@ -18,12 +18,16 @@ Questions are captured with project binding and stakeholder assignments, then su
 ```bash
 cd ~/.datacore/modules
 git clone https://github.com/datafund/datacore-open-questions open-questions
+cd open-questions
+./install.sh
 ```
+
+This registers the slash commands with Claude Code.
 
 Then initialize for your space:
 
 ```bash
-cp open-questions/templates/questions.org ~/Data/1-yourspace/org/questions.org
+cp templates/questions.org ~/Data/1-yourspace/org/questions.org
 ```
 
 ## Commands
