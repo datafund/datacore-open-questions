@@ -28,8 +28,24 @@ settings:
       type: string
       default: "question"
       description: Label for question issues in GitHub
+    show_in_daily_start:
+      type: boolean
+      default: true
+      description: Show open questions in /gtd-daily-start briefing
+    show_in_daily_end:
+      type: boolean
+      default: true
+      description: Show questions activity in /gtd-daily-end wrap-up
 
 creates:
   - path: "{space}/org/questions.org"
     type: file
     description: Open questions tracking file
+
+hooks:
+  daily_start:
+    description: Show open questions requiring your input
+    handler: hooks/daily-questions.md
+  daily_end:
+    description: Show new questions added today, prompt for any to add
+    handler: hooks/daily-questions.md
