@@ -62,6 +62,7 @@ Current API has no throttling. Enterprise customers asking about scalability.
 | `RESOLVED_DATE` | No | When resolved (for RESOLVED state) |
 | `ANSWER` | No | Brief answer summary (for RESOLVED state) |
 | `GITHUB_ISSUE` | No | Linked GitHub issue number |
+| `DUE` | No | Deadline if time-sensitive `[2025-12-20 Fri]` |
 
 ## Document Detection
 

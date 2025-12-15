@@ -17,6 +17,7 @@ Capture a new open question.
 - `--stakeholders` - Comma-separated usernames (optional)
 - `--priority` - high, medium, low (default: medium)
 - `--context` - Brief context/background (optional)
+- `--due` - Deadline if time-sensitive (optional, format: YYYY-MM-DD)
 - `--github` - Also create GitHub issue (default: true if github_sync enabled)
 
 ## Behavior
@@ -74,6 +75,7 @@ Append to `[space]/org/questions.org`:
 :CREATED: [2025-12-15 Mon]
 :CREATOR: username
 :CONTEXT: Optional context
+:DUE: [2025-12-20 Fri]
 :END:
 Additional details if provided.
 ```
