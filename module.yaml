@@ -1,0 +1,35 @@
+name: open-questions
+version: 0.1.0
+description: Track and manage open questions across projects (DIP-0006)
+author: datafund
+repository: https://github.com/datafund/datacore-open-questions
+
+dependencies:
+  - core@>=0.1.0
+
+provides:
+  commands:
+    - my-questions
+    - add-question
+    - meeting-agenda
+    - close-questions
+
+settings:
+  questions:
+    default_project:
+      type: string
+      required: false
+      description: Default project for questions when not specified
+    github_sync:
+      type: boolean
+      default: true
+      description: Sync questions to GitHub Issues with 'question' label
+    github_label:
+      type: string
+      default: "question"
+      description: Label for question issues in GitHub
+
+creates:
+  - path: "{space}/org/questions.org"
+    type: file
+    description: Open questions tracking file

@@ -1,0 +1,66 @@
+#+TITLE: Open Questions
+#+FILETAGS: :questions:
+#+STARTUP: overview
+
+* Questions Notation
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+
+** States
+- OPEN :: Awaiting discussion/decision
+- RESOLVED :: Decided, answer documented
+- DEFERRED :: Postponed to later date
+
+** Required Tags
+- =:question:= :: Marks entry as a question
+- =:projectname:= :: Binds to project (e.g., =:verity:=)
+
+** Optional Tags
+- =:@username:= :: Stakeholder who should provide input
+
+** Properties
+| Property | Description |
+|----------|-------------|
+| ID | Unique identifier =q-YYYYMMDD-NNN= |
+| PROJECT | Project this question belongs to |
+| STAKEHOLDERS | Comma-separated usernames |
+| PRIORITY | high, medium, low |
+| CREATED | Creation timestamp |
+| CONTEXT | Brief context/background |
+| RESOLVED_DATE | When resolved |
+| ANSWER | Decision summary |
+| GITHUB_ISSUE | Linked GitHub issue number |
+
+** Example
+
+#+begin_src org
+,* OPEN [Q] Should we implement rate limiting? :question:verity:@gregor:@crt:
+:PROPERTIES:
+:ID: q-20251215-001
+:PROJECT: verity
+:STAKEHOLDERS: gregor, crt
+:PRIORITY: high
+:CREATED: [2025-12-15 Mon]
+:CONTEXT: API scaling discussion
+:END:
+Current API has no throttling. Enterprise customers asking.
+
+,** Notes
+- @gregor: Need to check competitor approaches
+#+end_src
+
+* OPEN Questions
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+
+* RESOLVED Questions
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+
+* DEFERRED Questions
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
